@@ -14,9 +14,7 @@ export class App extends Component {
 
   updateProp = type => {
     this.setState(prevStat => {
-      let nextState = {};
-      nextState[type] = prevStat[type] + 1;
-      return nextState;
+      return { [type]: prevStat[type] + 1 };
     });
   };
 
